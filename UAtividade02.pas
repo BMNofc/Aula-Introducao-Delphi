@@ -87,7 +87,22 @@ begin
 
   if (sinal = '+') then
   begin
+      resultado:= n1 + n2;
+  end;
 
+  if (sinal = '-') then
+  begin
+      resultado:= n1 - n2;
+  end;
+
+  if (sinal = 'x') then
+  begin
+      resultado:= n1 * n2;
+  end;
+
+  if (sinal = '÷') then
+  begin
+      resultado:= n1 / n2;
   end;
 end;
 
