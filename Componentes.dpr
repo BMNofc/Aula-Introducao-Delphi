@@ -17,11 +17,15 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   TStyleManager.TrySetStyle('Smokey Quartz Kamri');
-  AApplication.CreateForm(TfrmPrincipal, frmPrincipal);
-  AApplication.CreateForm(TfrmExemplo01, frmExemplo01);
-  AApplication.CreateForm(TfrmAtividade01, frmAtividade01);
-  AApplication.CreateForm(TfrmExemplo02, frmExemplo02);
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TfrmExemplo01, frmExemplo01);
+  Application.CreateForm(TfrmAtividade01, frmAtividade01);
+  Application.CreateForm(TfrmExemplo02, frmExemplo02);
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.CreateForm(TfrmAtividade02, frmAtividade02);
   Application.CreateForm(TfrmAtividade26, frmAtividade26);
-  ication.Run;
+  Application.CreateForm(TfrmExemplo01, frmExemplo01);
+  Application.CreateForm(TfrmAtividade01, frmAtividade01);
+  Application.CreateForm(TfrmExemplo02, frmExemplo02);
+  Application.Run;
 end.

@@ -2,8 +2,8 @@ object frmAtividade26: TfrmAtividade26
   Left = 0
   Top = 0
   Caption = 'UAtividade26'
-  ClientHeight = 441
-  ClientWidth = 624
+  ClientHeight = 490
+  ClientWidth = 796
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -27,7 +27,7 @@ object frmAtividade26: TfrmAtividade26
   object lbl_idade: TLabel
     Left = 39
     Top = 128
-    Width = 89
+    Width = 80
     Height = 45
     Caption = 'Idade'
     Font.Charset = DEFAULT_CHARSET
@@ -36,25 +36,34 @@ object frmAtividade26: TfrmAtividade26
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    OnClick = lbl_idadeClick
+  end
+  object lbl_texto: TLabel
+    Left = 43
+    Top = 224
+    Width = 694
+    Height = 89
+    AutoSize = False
+    WordWrap = True
   end
   object edt_nome: TEdit
     Left = 176
-    Top = 37
-    Width = 289
-    Height = 53
+    Top = 24
+    Width = 369
+    Height = 81
     TabOrder = 0
+    OnChange = edt_nomeChange
   end
   object edt_idade: TEdit
     Left = 176
     Top = 128
-    Width = 97
-    Height = 45
+    Width = 145
+    Height = 57
     TabOrder = 1
+    OnChange = edt_idadeChange
   end
   object btn_idade: TButton
-    Left = 296
-    Top = 128
+    Left = 376
+    Top = 131
     Width = 169
     Height = 45
     Caption = 'Exibe idade'
@@ -65,5 +74,6 @@ object frmAtividade26: TfrmAtividade26
     Font.Style = []
     ParentFont = False
     TabOrder = 2
+    OnClick = btn_idadeClick
   end
 end
