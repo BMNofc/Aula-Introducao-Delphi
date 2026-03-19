@@ -1,8 +1,9 @@
 object frmAtividade26: TfrmAtividade26
   Left = 0
   Top = 0
+  BorderStyle = bsDialog
   Caption = 'UAtividade26'
-  ClientHeight = 490
+  ClientHeight = 440
   ClientWidth = 796
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -47,9 +48,9 @@ object frmAtividade26: TfrmAtividade26
   end
   object edt_nome: TEdit
     Left = 176
-    Top = 24
+    Top = 37
     Width = 369
-    Height = 81
+    Height = 58
     TabOrder = 0
     OnChange = edt_nomeChange
   end
@@ -57,7 +58,7 @@ object frmAtividade26: TfrmAtividade26
     Left = 176
     Top = 128
     Width = 145
-    Height = 57
+    Height = 48
     TabOrder = 1
     OnChange = edt_idadeChange
   end
