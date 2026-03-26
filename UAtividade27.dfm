@@ -149,8 +149,8 @@ object frmAtividade27: TfrmAtividade27
     object lbl_resultado_media: TLabel
       Left = 504
       Top = 16
-      Width = 75
-      Height = 57
+      Width = 7
+      Height = 37
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -27
@@ -162,7 +162,7 @@ object frmAtividade27: TfrmAtividade27
       Left = 24
       Top = 16
       Width = 81
-      Height = 57
+      Height = 45
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -27
@@ -175,7 +175,7 @@ object frmAtividade27: TfrmAtividade27
       Left = 136
       Top = 16
       Width = 81
-      Height = 57
+      Height = 45
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -27
@@ -188,7 +188,7 @@ object frmAtividade27: TfrmAtividade27
       Left = 256
       Top = 16
       Width = 81
-      Height = 57
+      Height = 45
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -27
@@ -201,7 +201,7 @@ object frmAtividade27: TfrmAtividade27
       Left = 384
       Top = 16
       Width = 81
-      Height = 57
+      Height = 45
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -27
@@ -209,6 +209,19 @@ object frmAtividade27: TfrmAtividade27
       Font.Style = []
       ParentFont = False
       TabOrder = 3
+    end
+    object edt_media: TEdit
+      Left = 504
+      Top = 16
+      Width = 81
+      Height = 45
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -27
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 4
     end
   end
   object Panel4: TPanel
@@ -220,8 +233,8 @@ object frmAtividade27: TfrmAtividade27
     object lbl_resultado: TLabel
       Left = 24
       Top = 16
-      Width = 249
-      Height = 81
+      Width = 7
+      Height = 37
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -27

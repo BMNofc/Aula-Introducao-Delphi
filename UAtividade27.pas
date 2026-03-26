@@ -26,6 +26,7 @@ type
     edt_nota3: TEdit;
     edt_nota4: TEdit;
     lbl_resultado: TLabel;
+    edt_media: TEdit;
     procedure btn_calcularClick(Sender: TObject);
   private
     { Private declarations }
@@ -42,18 +43,18 @@ implementation
 
 procedure TfrmAtividade27.btn_calcularClick(Sender: TObject);
 var nome, mensagem: string;
-soma, nota1, nota2, nota3, nota4: double;
+media, n1, n2, n3, n4: double;
 begin
 nome:= edt_nome.Text;
 
-nota1 := StrToFloat(edt_nota1.Text);
-nota2 := StrToFloat(edt_nota2.Text);
-nota3 := StrToFloat(edt_nota3.Text);
-nota4 := StrToFloat(edt_nota4.Text);
+n1 := StrToFloat(edt_nota1.Text);
+n2 := StrToFloat(edt_nota2.Text);
+n3 := StrToFloat(edt_nota3.Text);
+n4 := StrToFloat(edt_nota4.Text);
 
-soma := nota1 + nota2 + nota3 + nota4/4;
+media := (n1 + n2 + n3 + n4)/4;
 
-mensagem := 'Aluno(a): ' + nome  +   ' Média = ';
+mensagem := 'Aluno(a): ' + nome  + ' sua média é = ' + FloatToStr(media);
 
 lbl_resultado.caption:= mensagem;
 end;
