@@ -54,6 +54,8 @@ n4 := StrToFloat(edt_nota4.Text);
 
 media := (n1 + n2 + n3 + n4)/4;
 
+edt_media.Text := FormatFloat('0.00', media);
+
 mensagem := 'Aluno(a): ' + nome  + ' sua média é = ' + FloatToStr(media);
 
 lbl_resultado.caption:= mensagem;
