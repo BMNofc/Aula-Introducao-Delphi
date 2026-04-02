@@ -16,9 +16,11 @@ type
     edt_senha: TEdit;
     btn_acessar: TButton;
     procedure btn_acessarClick(Sender: TObject);
+    procedure edt_usuarioKeyPress(Sender: TObject; var Key: Char);
+    procedure edt_senhaKeyPress(Sender: TObject; var Key: Char);
     procedure edt_senhaChange(Sender: TObject);
   private
-    { Private declarations }
+    var senha, usuario: string;
   public
     { Public declarations }
   end;
@@ -31,28 +33,46 @@ implementation
 {$R *.dfm}
 
 procedure TfrmAtividade28.btn_acessarClick(Sender: TObject);
-var senha, usuario: string;
+var user, passwd: string;
 begin
     usuario:='Brayan';
     senha:='cs2';
 
-    if (edt_usuario.Text = usuario) and (edt_senha.Text = senha) then
+    if (user = usuario) and (passwd = senha) then
     begin
       ShowMessage('Acesso liberado');
+      Close;
     end
     else
     begin
       ShowMessage('Acesso negado');
+      edt_usuario.SetFocus;
     end;
-    edt_usuario.Text:= '';
-    edt_senha.Text:= '';
+    edt_usuario.Clear;
+    edt_senha.Clear;
 
 end;
 
 
 procedure TfrmAtividade28.edt_senhaChange(Sender: TObject);
 begin
-edt_senha.PasswordChar:='?';
+    edt_senha.PasswordChar:='#';
+end;
+
+procedure TfrmAtividade28.edt_senhaKeyPress(Sender: TObject; var Key: Char);
+begin
+  if(key=#13) then
+   begin
+     edt_senha.SetFocus;
+   end;
+end;
+
+procedure TfrmAtividade28.edt_usuarioKeyPress(Sender: TObject; var Key: Char);
+begin
+   if(key=#13) then
+   begin
+     edt_usuario.SetFocus;
+   end;
 end;
 
 end.

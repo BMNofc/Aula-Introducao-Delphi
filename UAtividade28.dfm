@@ -57,6 +57,7 @@ object frmAtividade28: TfrmAtividade28
       Font.Style = []
       ParentFont = False
       TabOrder = 2
+      OnKeyPress = edt_usuarioKeyPress
     end
     object PanelSenha: TPanel
       Left = 208
@@ -85,6 +86,7 @@ object frmAtividade28: TfrmAtividade28
       ParentFont = False
       TabOrder = 4
       OnChange = edt_senhaChange
+      OnKeyPress = edt_senhaKeyPress
     end
     object btn_acessar: TButton
       Left = 208
