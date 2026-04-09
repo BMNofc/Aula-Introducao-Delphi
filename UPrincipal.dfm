@@ -41,7 +41,7 @@ object frmPrincipal: TfrmPrincipal
   end
   object btnAtividade02: TButton
     Left = 256
-    Top = 80
+    Top = 65
     Width = 150
     Height = 41
     Caption = 'Atividade 2'
@@ -50,7 +50,7 @@ object frmPrincipal: TfrmPrincipal
   end
   object btnAtividade26: TButton
     Left = 256
-    Top = 144
+    Top = 112
     Width = 150
     Height = 41
     Caption = 'Atividade 26'
@@ -59,7 +59,7 @@ object frmPrincipal: TfrmPrincipal
   end
   object btnAtividade27: TButton
     Left = 256
-    Top = 208
+    Top = 159
     Width = 150
     Height = 41
     Caption = 'Atividade 27'
@@ -68,11 +68,29 @@ object frmPrincipal: TfrmPrincipal
   end
   object btnAtividade28: TButton
     Left = 256
-    Top = 272
+    Top = 206
     Width = 150
     Height = 41
     Caption = 'Atividade 28'
     TabOrder = 6
     OnClick = btnAtividade28Click
+  end
+  object btnAtividadeMessage: TButton
+    Left = 240
+    Top = 253
+    Width = 185
+    Height = 44
+    Caption = 'Atividade Message'
+    TabOrder = 7
+    OnClick = btnAtividadeMessageClick
+  end
+  object btnAtividadeInputBox: TButton
+    Left = 256
+    Top = 303
+    Width = 150
+    Height = 42
+    Caption = 'Atividade Input'
+    TabOrder = 8
+    OnClick = btnAtividadeInputBoxClick
   end
 end
