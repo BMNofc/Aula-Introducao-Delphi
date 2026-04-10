@@ -162,8 +162,8 @@
             <Form>frmMessageBox</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="UAtividadeInputBox.pas">
-            <Form>frmInputBox</Form>
+        <DCCReference Include="UAtividade43.pas">
+            <Form>frmAtividade43</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">

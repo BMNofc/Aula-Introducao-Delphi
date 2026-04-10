@@ -20,4 +20,13 @@ object frmMessageBox: TfrmMessageBox
     TabOrder = 0
     OnClick = btnMessageClick
   end
+  object btnInputBox: TButton
+    Left = 24
+    Top = 112
+    Width = 161
+    Height = 49
+    Caption = 'InputBox'
+    TabOrder = 1
+    OnClick = btnInputBoxClick
+  end
 end

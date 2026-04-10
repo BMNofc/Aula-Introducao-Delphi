@@ -9,7 +9,9 @@ uses
 type
   TfrmMessageBox = class(TForm)
     btnMessage: TButton;
+    btnInputBox: TButton;
     procedure btnMessageClick(Sender: TObject);
+    procedure btnInputBoxClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -23,12 +25,27 @@ implementation
 
 {$R *.dfm}
 
+procedure TfrmMessageBox.btnInputBoxClick(Sender: TObject);
+var texto: string;
+begin
+     texto:= InputBox('Escolha o país', 'Digite o nome', 'Brasil');
+     ShowMessage('O nome do país escolhido é:' + texto);
+end;
+
 procedure TfrmMessageBox.btnMessageClick(Sender: TObject);
 var Mensagem: integer;
 begin
        Mensagem:= MessageBox(Application.Handle,
           'Selecione uma opção para exibir seu valor', 'Saída',
           MB_ICONQUESTION + MB_YESNOCANCEL + MB_DEFBUTTON2);
+          if Mensagem = idYes then
+          ShowMessage('Retorno = idYes')
+          else
+          if Mensagem = idNo then
+          ShowMessage('Retorno = idNo')
+          else
+          if Mensagem = idCancel then
+          ShowMessage('Retorno = idCancel')
 end;
 
 end.
