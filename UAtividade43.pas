@@ -43,26 +43,26 @@ resultado_bruto := StrToFloat(edtHora.Text) * StrToFloat(edtHoraMes.Text);
 
   else if resultado_bruto <= 3500 then
   begin
-  resultado_ir := resultado_bruto - (resultado_bruto *0.95);
+  resultado_ir := resultado_bruto *0.05;
   resultado_ir2 := '5%'
   end
 
   else if resultado_bruto <= 7500 then
   begin
-  resultado_ir := resultado_bruto - (resultado_bruto * 0.9);
+  resultado_ir := resultado_bruto * 0.1;
   resultado_ir2 := '10%'
   end
 
   else
   begin
-  resultado_ir := resultado_bruto - (resultado_bruto *0.8);
+  resultado_ir := resultado_bruto *0.2;
   resultado_ir2 := '20%';
   end;
 
-  resultado_inss := resultado_bruto * 0.9;
-  resultado_sindicato := resultado_bruto * 0.97;
+  resultado_inss := resultado_bruto * 0.1;
+  resultado_sindicato := resultado_bruto * 0.03;
   resultado_liquido := resultado_bruto - resultado_inss - resultado_sindicato - resultado_ir;
-  resultado_fgts := resultado_bruto * 0.89;
+  resultado_fgts := resultado_bruto * 0.11;
 
   showmessage('Nome: '+ edtNome.Text +slinebreak +
   'Salário Bruto: R$ '+ FormatFloat('0.00',resultado_bruto)+ slinebreak+
