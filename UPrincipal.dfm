@@ -84,13 +84,13 @@ object frmPrincipal: TfrmPrincipal
     TabOrder = 7
     OnClick = btnAtividadeMessageClick
   end
-  object btnAtividadeInputBox: TButton
+  object btnAtividade43: TButton
     Left = 256
     Top = 303
     Width = 150
     Height = 42
-    Caption = 'Atividade Input'
+    Caption = 'Atividade 43'
     TabOrder = 8
-    OnClick = btnAtividadeInputBoxClick
+    OnClick = btnAtividade43Click
   end
 end

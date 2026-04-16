@@ -1,6 +1,7 @@
 object frmAtividade43: TfrmAtividade43
   Left = 0
   Top = 0
+  BorderStyle = bsToolWindow
   Caption = 'Atividade43'
   ClientHeight = 361
   ClientWidth = 463
@@ -12,14 +13,14 @@ object frmAtividade43: TfrmAtividade43
   Font.Style = []
   TextHeight = 15
   object Panel1: TPanel
-    Left = 8
-    Top = 8
+    Left = -8
+    Top = -8
     Width = 616
     Height = 425
     TabOrder = 0
     object lblNome: TLabel
       Left = 56
-      Top = 32
+      Top = 37
       Width = 79
       Height = 37
       Caption = 'Nome:'
@@ -57,10 +58,16 @@ object frmAtividade43: TfrmAtividade43
       ParentFont = False
     end
     object edtNome: TEdit
-      Left = 192
-      Top = 40
+      Left = 184
+      Top = 37
       Width = 249
-      Height = 41
+      Height = 45
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -27
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 0
     end
     object edtHora: TEdit
@@ -102,6 +109,7 @@ object frmAtividade43: TfrmAtividade43
       Font.Style = []
       ParentFont = False
       TabOrder = 3
+      OnClick = btnCalcularSalarioClick
     end
   end
 end
