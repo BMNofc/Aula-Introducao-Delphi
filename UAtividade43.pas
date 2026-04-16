@@ -18,10 +18,8 @@ type
     btnCalcularSalario: TButton;
     procedure btnCalcularSalarioClick(Sender: TObject);
   private
-    var ir, inss, sindicato, fgts, liquido, salarioBruto : Double;
-    var ir2, nome, mensagem : string;
-    vhora, horat, descontos, porcDesc, porcLiq, resultado: Real;
-    erro, ehnum: Boolean;
+   var resultado_ir, resultado_inss, resultado_sindicato, resultado_fgts, resultado_liquido, resultado_bruto : Double;
+    var resultado_ir2 : string;
   public
     { Public declarations }
   end;
@@ -35,23 +33,46 @@ implementation
 
 procedure TfrmAtividade43.btnCalcularSalarioClick(Sender: TObject);
 begin
-salarioBruto := StrToFloat(edtHora.Text) * StrToFloat(edtHoraMes.Text);
+resultado_bruto := StrToFloat(edtHora.Text) * StrToFloat(edtHoraMes.Text);
 
+  if resultado_bruto <= 1900 then
+  begin
+  resultado_ir := 0 ;
+  resultado_ir2 := 'Isento'
+  end
 
-  inss := salarioBruto * 0.1;
-  sindicato := salarioBruto * 0.03;
-  liquido := salarioBruto - inss - sindicato - fgts - ir;
-  fgts := salarioBruto * 0.11;
+  else if resultado_bruto <= 3500 then
+  begin
+  resultado_ir := resultado_bruto - (resultado_bruto *0.95);
+  resultado_ir2 := '5%'
+  end
 
+  else if resultado_bruto <= 7500 then
+  begin
+  resultado_ir := resultado_bruto - (resultado_bruto * 0.9);
+  resultado_ir2 := '10%'
+  end
 
-  ShowMessage('Nome: '+ edtNome.Text +slinebreak +
-  'Salário Bruto: R$ '+ FormatFloat('0.00',salarioBruto)+ slinebreak+
-  '(-) IR('+ ir2 +'): R$ '+FormatFloat('0.00',ir)+slinebreak+
-  '(-) INSS(10%): R$ '+FormatFloat('0.00',inss)+slinebreak+
-  '(-) Sindicato(3%): R$ '+FormatFloat('0.00',sindicato)+slinebreak+
-  'FGTS(11%): R$ '+ FormatFloat('0.00', fgts)+slinebreak+
-  'Total de desconto: R$ '+FormatFloat('0.00',sindicato+ir+inss)+slinebreak+
-  'Salário Líquido: R$ '+ FormatFloat('0.00',liquido))
+  else
+  begin
+  resultado_ir := resultado_bruto - (resultado_bruto *0.8);
+  resultado_ir2 := '20%';
+  end;
+
+  resultado_inss := resultado_bruto * 0.9;
+  resultado_sindicato := resultado_bruto * 0.97;
+  resultado_liquido := resultado_bruto - resultado_inss - resultado_sindicato - resultado_ir;
+  resultado_fgts := resultado_bruto * 0.89;
+
+  showmessage('Nome: '+ edtNome.Text +slinebreak +
+  'Salário Bruto: R$ '+ FormatFloat('0.00',resultado_bruto)+ slinebreak+
+  '(-) IR('+ resultado_ir2 +'): R$ '+FormatFloat('0.00',resultado_ir)+slinebreak+
+  '(-) INSS(10%): R$ '+FormatFloat('0.00',resultado_inss)+slinebreak+
+  '(-) Sindicato(3%): R$ '+FormatFloat('0.00',resultado_sindicato)+slinebreak+
+  'FGTS(11%): R$ '+FormatFloat('0.00',resultado_fgts)+slinebreak+
+  'Total de desconto: R$ '+FormatFloat('0.00',resultado_sindicato+resultado_ir+resultado_inss)+slinebreak+
+  'Salário Líquido: R$ '+ FormatFloat('0.00',resultado_liquido))
+
 end;
 
 end.
