@@ -15,7 +15,7 @@ object frmAtividade46: TfrmAtividade46
   object lblMensagem: TLabel
     Left = 3
     Top = 8
-    Width = 343
-    Height = 78
+    Width = 3
+    Height = 15
   end
 end
