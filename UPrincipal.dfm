@@ -2,8 +2,8 @@ object frmPrincipal: TfrmPrincipal
   Left = 0
   Top = 0
   Caption = 'Exemplo Componentes Aula Delphi'
-  ClientHeight = 363
-  ClientWidth = 649
+  ClientHeight = 346
+  ClientWidth = 643
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -119,5 +119,14 @@ object frmPrincipal: TfrmPrincipal
     Caption = 'Atividade 47'
     TabOrder = 11
     OnClick = btnAtividade47Click
+  end
+  object btnAtividade48: TButton
+    Left = 480
+    Top = 120
+    Width = 145
+    Height = 33
+    Caption = 'Atividade 48'
+    TabOrder = 12
+    OnClick = btnAtividade48Click
   end
 end

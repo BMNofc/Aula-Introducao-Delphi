@@ -25,29 +25,26 @@ implementation
 
 procedure TfrmAtividade47.FormShow(Sender: TObject);
 var
-  contador, numero: Integer;
-  entrada: String;
-  pares, impares: String;
+  contador, n: Integer;
+  par, impar: String;
 begin
-  contador := 1;
-  pares := '';
-  impares := '';
+  par := 'Números pares: ' + #13;
+  impar := 'Números ímpares: ' + #13;
 
-  repeat
-    entrada := InputBox('Entrada',
-      'Digite o ' + IntToStr(contador) + 'ATV_47', '');
+  for contador := 1 to 6 do
+    begin
+       n:= StrToInt(InputBox('Digite um número: ', 'ATV_47', ''));
+       if (Odd(n)) then
+       begin
+          impar := impar + IntToStr(n) + #13;
+       end
+       else
+       begin
+         par := par + IntToStr(n) + #13;
+       end;
+    end;
 
-    numero := StrToInt(entrada);
-
-    if (numero mod 2 = 0) then
-      pares := pares + IntToStr(numero) + ' '
-    else
-      impares := impares + IntToStr(numero) + ' ';
-
-    Inc(contador);
-  until (contador > 6);
-
-  Application.MessageBox(pChar(pares + #13 + impares), 'ATV_47', MB_OK + MB_ICONINFORMATION);
+  Application.MessageBox(pChar(par + #13 + impar), 'ATV_47', MB_OK + MB_ICONINFORMATION);
   Application.Terminate;
 end;
 
