@@ -12,4 +12,9 @@ object frmAtividade51: TfrmAtividade51
   Font.Style = []
   OnShow = FormShow
   TextHeight = 15
+  object Timer: TTimer
+    OnTimer = TimerTimer
+    Left = 216
+    Top = 64
+  end
 end

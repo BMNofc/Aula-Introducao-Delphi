@@ -10,5 +10,11 @@ object frmAtividade50: TfrmAtividade50
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnShow = FormShow
   TextHeight = 15
+  object Timer: TTimer
+    OnTimer = TimerTimer
+    Left = 200
+    Top = 64
+  end
 end
