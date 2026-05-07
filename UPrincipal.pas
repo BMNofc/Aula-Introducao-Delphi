@@ -21,6 +21,9 @@ type
     btnAtividade46: TButton;
     btnAtividade47: TButton;
     btnAtividade48: TButton;
+    btnAtividade49: TButton;
+    btnAtividade50: TButton;
+    btnAtividade52: TButton;
     procedure btnExemplo01Click(Sender: TObject);
     procedure btnAtividade01Click(Sender: TObject);
     procedure btnExemplo02Click(Sender: TObject);
@@ -34,6 +37,9 @@ type
     procedure btnAtividade46Click(Sender: TObject);
     procedure btnAtividade47Click(Sender: TObject);
     procedure btnAtividade48Click(Sender: TObject);
+    procedure btnAtividade49Click(Sender: TObject);
+    procedure btnAtividade50Click(Sender: TObject);
+    procedure btnAtividade52Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,7 +54,7 @@ implementation
 {$R *.dfm}
 
 uses UExemplo01, UAtividade01, UExemplo02, UAtividade02, UAtividade26, UAtividade27,
-  UAtividade28, UAtividade43, UEx_24, UAtividade46, UAtividade47, UAtividade48, UAtividadeMessageBox, UAtividadeInputBox;
+  UAtividade28, UAtividade43, UEx_24, UAtividade46, UAtividade47, UAtividade48, UAtividade49, UAtividade50, UAtividade52, UAtividadeMessageBox, UAtividadeInputBox;
 
 
 procedure TfrmPrincipal.btnAtividade01Click(Sender: TObject);
@@ -96,6 +102,21 @@ begin
 frmAtividade48.ShowModal;
 end;
 
+procedure TfrmPrincipal.btnAtividade49Click(Sender: TObject);
+begin
+frmAtividade49.ShowModal;
+end;
+
+procedure TfrmPrincipal.btnAtividade50Click(Sender: TObject);
+begin
+frmAtividade50.ShowModal;
+end;
+
+procedure TfrmPrincipal.btnAtividade52Click(Sender: TObject);
+begin
+frmAtividade52.ShowModal;
+end;
+
 procedure TfrmPrincipal.btnAtividadeMessageClick(Sender: TObject);
 begin
  frmMessageBox.ShowModal;
@@ -115,5 +136,7 @@ procedure TfrmPrincipal.btnExemplo24Click(Sender: TObject);
 begin
   frmEx_24.ShowModal;
 end;
+
+
 
 end.

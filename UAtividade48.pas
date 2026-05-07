@@ -58,7 +58,9 @@ begin
     media := 0;
   end;
 
-  Application.MessageBox(pChar('Quantidade de números digitados: ' + IntToStr(contador)) + ('Soma dos números: ' + IntToStr(soma)) + ('Média: ' + FloatToStr(media)), 'ATV_48', MB_OK + MB_ICONINFORMATION);
+  Application.MessageBox(PChar('Quantidade de números digitados: ' + IntToStr(contador) + #13 +
+    'Soma dos números: ' + IntToStr(soma) + #13 +
+    'Média: ' + FloatToStr(media)), 'ATV_48', MB_OK + MB_ICONINFORMATION);
   Application.Terminate;
 end;
 
