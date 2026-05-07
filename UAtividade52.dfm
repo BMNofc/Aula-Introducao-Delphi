@@ -10,7 +10,6 @@ object frmAtividade52: TfrmAtividade52
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OnShow = FormShow
   TextHeight = 13
   object lblInicio: TLabel
     Left = 16
@@ -91,5 +90,6 @@ object frmAtividade52: TfrmAtividade52
     Font.Style = []
     ParentFont = False
     TabOrder = 3
+    OnClick = btnExibirClick
   end
 end

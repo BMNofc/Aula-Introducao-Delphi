@@ -14,7 +14,7 @@ type
     edtInicio: TEdit;
     edtFim: TEdit;
     btnExibir: TButton;
-    procedure FormShow(Sender: TObject);
+    procedure btnExibirClick(Sender: TObject);
   private
     nInicio, nFim, resultado, contador1, contador2 : Integer;
   public
@@ -28,7 +28,7 @@ implementation
 
 {$R *.dfm}
 
-procedure TfrmAtividade52.FormShow(Sender: TObject);
+procedure TfrmAtividade52.btnExibirClick(Sender: TObject);
 var
   valorInicial, valorFinal: Integer;
   contador1, contador2: Integer;
@@ -70,6 +70,7 @@ begin
   end;
 
   Close;
+
 end;
 
 end.
