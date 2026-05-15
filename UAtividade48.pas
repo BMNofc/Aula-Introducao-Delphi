@@ -30,6 +30,7 @@ var
 begin
       contador:= 0;
       soma:= 0;
+      media:= 0;
 
  repeat
     entrada := InputBox('Entrada',
