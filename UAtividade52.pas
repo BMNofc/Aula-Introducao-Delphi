@@ -47,7 +47,6 @@ begin
         mmoValores.Lines.Add(IntToStr(contador1) + ' X ' + IntToStr(contador2) + ' = ' + IntToStr(resultado));
       end;
   end;
-
 end;
 
 end.
