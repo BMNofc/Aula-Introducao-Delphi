@@ -16,7 +16,7 @@ type
     btnExibir: TButton;
     procedure btnExibirClick(Sender: TObject);
   private
-    nInicio, nFim, resultado, contador1, contador2 : Integer;
+    nInicio, nFim, resultado : Integer;
   public
     { Public declarations }
   end;
@@ -29,49 +29,25 @@ implementation
 {$R *.dfm}
 
 procedure TfrmAtividade52.btnExibirClick(Sender: TObject);
-var
-  valorInicial, valorFinal: Integer;
-  contador1, contador2: Integer;
-  resultado: String;
+var contador1, contador2 : Integer;
 begin
-  valorInicial := StrToInt(
-    InputBox(
-      'Tabuada',
-      'Digite o valor inicial:',
-      ''
-    )
-  );
 
-  valorFinal := StrToInt(
-    InputBox(
-      'Tabuada',
-      'Digite o valor final:',
-      ''
-    )
-  );
+  contador1 := 0;
+  contador2 := 0;
 
-  for contador1 := valorInicial to valorFinal do
+  nInicio := StrToInt(edtInicio.Text);
+  nFim := StrToInt(edtFim.Text);
+
+  for contador1 := nInicio to nFim do
   begin
-    resultado := 'TABUADA DO ' + IntToStr(contador1) + #13 + #13;
-
+    mmoValores.Lines.Add('Tabuada do ' + IntToStr(contador1));
     for contador2 := 1 to 10 do
-    begin
-      resultado := resultado +
-        IntToStr(contador1) + ' X ' +
-        IntToStr(contador2) + ' = ' +
-        IntToStr(contador1 * contador2) + #13;
-    end;
-
-    Application.MessageBox(
-      PChar(resultado),
-      'TABUADA',
-      MB_OK + MB_ICONINFORMATION
-    );
+      begin
+        resultado := contador1 * contador2;
+        mmoValores.Lines.Add(IntToStr(contador1) + ' X ' + IntToStr(contador2) + ' = ' + IntToStr(resultado));
+      end;
   end;
 
-  Close;
-
 end;
-
 
 end.
