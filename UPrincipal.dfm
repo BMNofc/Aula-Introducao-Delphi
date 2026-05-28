@@ -2,7 +2,7 @@ object frmPrincipal: TfrmPrincipal
   Left = 0
   Top = 0
   Caption = 'Exemplo Componentes Aula Delphi'
-  ClientHeight = 443
+  ClientHeight = 396
   ClientWidth = 880
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -76,8 +76,8 @@ object frmPrincipal: TfrmPrincipal
     OnClick = btnAtividade28Click
   end
   object btnAtividadeMessage: TButton
-    Left = 240
-    Top = 253
+    Left = 24
+    Top = 203
     Width = 185
     Height = 44
     Caption = 'Atividade Message'
@@ -86,7 +86,7 @@ object frmPrincipal: TfrmPrincipal
   end
   object btnAtividade43: TButton
     Left = 256
-    Top = 303
+    Top = 259
     Width = 150
     Height = 42
     Caption = 'Atividade 43'
@@ -103,8 +103,8 @@ object frmPrincipal: TfrmPrincipal
     OnClick = btnExemplo24Click
   end
   object btnAtividade46: TButton
-    Left = 480
-    Top = 24
+    Left = 256
+    Top = 312
     Width = 145
     Height = 35
     Caption = 'Atividade 46'
@@ -112,8 +112,8 @@ object frmPrincipal: TfrmPrincipal
     OnClick = btnAtividade46Click
   end
   object btnAtividade47: TButton
-    Left = 480
-    Top = 68
+    Left = 256
+    Top = 353
     Width = 145
     Height = 34
     Caption = 'Atividade 47'
@@ -122,7 +122,7 @@ object frmPrincipal: TfrmPrincipal
   end
   object btnAtividade48: TButton
     Left = 480
-    Top = 120
+    Top = 25
     Width = 145
     Height = 33
     Caption = 'Atividade 48'
@@ -131,7 +131,7 @@ object frmPrincipal: TfrmPrincipal
   end
   object btnAtividade49: TButton
     Left = 480
-    Top = 163
+    Top = 69
     Width = 145
     Height = 33
     Caption = 'Atividade 49'
@@ -140,7 +140,7 @@ object frmPrincipal: TfrmPrincipal
   end
   object btnAtividade50: TButton
     Left = 480
-    Top = 210
+    Top = 120
     Width = 145
     Height = 33
     Caption = 'Atividade 50'
@@ -149,7 +149,7 @@ object frmPrincipal: TfrmPrincipal
   end
   object btnAtividade51: TButton
     Left = 480
-    Top = 249
+    Top = 165
     Width = 145
     Height = 35
     Caption = 'Atividade 51'
@@ -158,7 +158,7 @@ object frmPrincipal: TfrmPrincipal
   end
   object btnAtividade52: TButton
     Left = 480
-    Top = 296
+    Top = 214
     Width = 145
     Height = 33
     Caption = 'Atividade 52'
@@ -167,11 +167,20 @@ object frmPrincipal: TfrmPrincipal
   end
   object btnAtividade53: TButton
     Left = 480
-    Top = 344
+    Top = 259
     Width = 145
-    Height = 33
+    Height = 42
     Caption = 'Atividade 53'
     TabOrder = 17
     OnClick = btnAtividade53Click
+  end
+  object btnAtividade54: TButton
+    Left = 480
+    Top = 312
+    Width = 145
+    Height = 40
+    Caption = 'Atividade 54'
+    TabOrder = 18
+    OnClick = btnAtividade54Click
   end
 end
