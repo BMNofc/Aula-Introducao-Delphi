@@ -298,6 +298,7 @@ object frmAtividade54: TfrmAtividade54
     Font.Style = []
     ParentFont = False
     TabOrder = 5
+    OnClick = btnInserirDadosClick
   end
   object btnLimparDados: TButton
     Left = 263

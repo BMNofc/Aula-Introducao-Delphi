@@ -10,6 +10,7 @@
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  OnShow = FormShow
   TextHeight = 13
   object lblNome: TLabel
     Left = 32
@@ -218,5 +219,6 @@
     Font.Style = []
     ParentFont = False
     TabOrder = 7
+    OnClick = btnLimparClick
   end
 end
