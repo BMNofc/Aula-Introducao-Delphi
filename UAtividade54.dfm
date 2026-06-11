@@ -84,6 +84,7 @@ object frmAtividade54: TfrmAtividade54
     Font.Height = -16
     Font.Name = 'Tahoma'
     Font.Style = []
+    NumbersOnly = True
     ParentFont = False
     ParentShowHint = False
     ShowHint = True
@@ -106,8 +107,8 @@ object frmAtividade54: TfrmAtividade54
     Font.Name = 'Tahoma'
     Font.Style = []
     Items.Strings = (
-      'Masculino'
-      'Feminino')
+      'Feminino'
+      'Masculino')
     ParentFont = False
     ParentShowHint = False
     ShowHint = True

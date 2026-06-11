@@ -48,65 +48,69 @@ implementation
 
 procedure TfrmAtividade54.btnInserirDadosClick(Sender: TObject);
 var
-nome, mensagem, padrao, cadastro: String;
-sexo, idade, testeIdade: Integer;
-valida, soLetras: Boolean;
+  nome, mensagem, padrao, cadastro: String;
+  sexo, idade: Integer;
+  valida, sohLetras : Boolean;
 begin
 
-    valida :=true;
-    mensagem := '';
-    padrao := '\b[A-Z]\b';
+  valida := true;
+  mensagem := '';
+  padrao := '^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$';
 
-    nome := edtNome.Text;
-    idade := StrToInt(edtIdade.Text);
-    sexo := rgpSexo.ItemIndex;
+  nome := edtNome.Text;
+  idade := StrToInt(edtIdade.Text);
+  sexo := rgpSexo.ItemIndex;
 
-    soLetras := TRegEx.IsMatch(nome, Padrao, [roIgnoreCase]);
-    ShowMessage(BoolToStr(soLetras));
-
-    if not soLetras then
-    begin
-      valida := false;
-      mensagem:= mensagem + 'O nome deve ser composto somente por letras' + sLineBreak;
-    end;
+  sohLetras := TRegEx.IsMatch(nome, padrao, [roIgnoreCase]);
 
 
-    if (nome = '') or (nome.length < 3) then
-    begin
+  if not sohLetras then
+  begin
     valida := false;
-    mensagem := mensagem + ' - O nome deve ser preenchido com pelo menos 3 caracteres' +sLineBreak;
-    end;
+    mensagem := mensagem + '- O nome deve ser composto apenas por letras' + sLineBreak;
+  end;
 
-    if idade > 150 then
-    begin
-      valida := false;
-      mensagem:= mensagem + 'Digite uma idade menor que 150' + sLineBreak;
-    end;
+  if (nome = '') or (nome.Length < 3) then
+  begin
+    valida := false;
+    mensagem := mensagem + '- O nome deve ser preenchido com pele menos 3 caracteres' + sLineBreak;
+  end;
 
-    if sexo = -1 then
+  if idade > 150 then
+  begin
+    valida := false;
+    mensagem := mensagem + '- Digite uma idade menor que 150' + sLineBreak;
+  end;
+
+  if sexo = -1 then
+  begin
+    valida := false;
+    mensagem := mensagem + '- Selecione o sexo' + sLineBreak;
+  end;
+
+  if valida = false then
+  begin
+    Application.MessageBox(pChar(mensagem), 'Erro', MB_OK + MB_ICONERROR);
+  end
+  else
+  begin
+    cadastro := 'Registro nº: ' + sLineBreak;
+    cadastro := cadastro + 'Nome: ' + nome + sLineBreak;
+    cadastro := cadastro + 'Idade: ' + IntToStr(idade) + sLineBreak;
+
+    if sexo = 0 then
     begin
-      valida := false;
-      mensagem:= mensagem + 'Selecione o sexo' + sLineBreak;
+      cadastro := cadastro + 'Sexo: Feminino';
     end
     else
     begin
-      cadastro := 'Registro n°: '+ sLineBreak;
-      cadastro := cadastro + 'Nome: ' + sLineBreak;
-      cadastro := cadastro + 'Idade: ' + IntToStr(idade) + sLineBreak;
-
-      if sexo = 0 then
-      begin
-        cadastro:= cadastro + 'Sexo: Feminino';
-      end
-      else
-      begin
-        cadastro:= cadastro + 'Sexo: Masculino';
-      end;
+      cadastro := cadastro + 'Sexo: Masculino';
     end;
 
+    mmoRegistros.Lines.Add(cadastro);
 
-    if valida = false then
-    Application.MessageBox(), (pChar(mensagem), 'Erro', MB_OK, MB_ICONERROR);
+  end;
 
 end;
+
 end.
