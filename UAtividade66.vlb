@@ -1,0 +1,10 @@
+﻿[lblUsuario]
+Coordinates=10,10,72,58
+
+[]
+Coordinates=163,1,91,36
+
+[lblSenha]
+Coordinates=92,10,53,58
+Visible=True
+
